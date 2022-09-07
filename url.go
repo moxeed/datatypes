@@ -36,6 +36,11 @@ func (u *URL) Scan(value interface{}) error {
 	return nil
 }
 
+func (u *URL) UnmarshalParam(param string) error {
+	u.Scan(param)
+	return nil
+}
+
 func (URL) GormDataType() string {
 	return "url"
 }

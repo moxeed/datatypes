@@ -66,6 +66,11 @@ func (t *Time) Scan(src interface{}) error {
 	return nil
 }
 
+func (t *Time) UnmarshalParam(param string) error {
+	t.Scan(param)
+	return nil
+}
+
 func (t *Time) setFromString(str string) {
 	var h, m, s, n int
 	fmt.Sscanf(str, "%02d:%02d:%02d.%09d", &h, &m, &s, &n)

@@ -15,6 +15,11 @@ func (date *Date) Scan(value interface{}) (err error) {
 	return
 }
 
+func (date *Date) UnmarshalParam(param string) error {
+	date.Scan(param)
+	return nil
+}
+
 func (date Date) Value() (driver.Value, error) {
 	y, m, d := time.Time(date).Date()
 	return time.Date(y, m, d, 0, 0, 0, 0, time.Time(date).Location()), nil

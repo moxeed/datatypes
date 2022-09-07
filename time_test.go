@@ -3,7 +3,7 @@ package datatypes_test
 import (
 	"testing"
 
-	"gorm.io/datatypes"
+	"github.com/moxeed/datatypes"
 	. "gorm.io/gorm/utils/tests"
 )
 

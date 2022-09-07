@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/jinzhu/now"
-	"gorm.io/datatypes"
+	"github.com/moxeed/datatypes"
 	. "gorm.io/gorm/utils/tests"
 )
 
