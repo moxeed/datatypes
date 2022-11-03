@@ -53,7 +53,5 @@ func (date *Date) UnmarshalJSON(b []byte) error {
 	_, _ = fmt.Sscanf(dateString, "\"%04d-%02d-%02dT%02d:%02d:%02d.%d", &y, &mo, &d, &h, &m, &s, &n)
 	date.Time = time.Date(y, time.Month(mo), d, h, m, s, n, date.Location())
 
-	print(date.Time)
-
 	return nil
 }
